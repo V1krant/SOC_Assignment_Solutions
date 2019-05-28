@@ -37,12 +37,12 @@
             function dragging(event){
                 var x=event.clientX;
                 var y=event.clientY-652;
-                var h=document.getElementById("t1").height;
-                var w=document.getElementById("t1").width;
+                var h=300;
+                var w=300;
                 // y=652
-                document.getElementById("tf2").value= ""+y+"";
-                document.getElementById("t1").height=h-y;
-                document.getElementById("t1").width=w+x;
+                document.getElementById("tf2").value= ""+Math.abs(h-y)+"";
+                document.getElementById("t1").height=Math.abs(h-y);
+                document.getElementById("t1").width=Math.abs(w+x);
             }
         </script>        
     </head>
@@ -60,8 +60,8 @@
         </iframe>
         </div>
         <div>
-            <p class="droptarget" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">
-                helo
+            <p class="droptarget" ondrag="dragging(event)" draggable="true" id="dragtarget">
+                Click to drag
             </p>
         </div>
         <br><br><br>
