@@ -47,11 +47,14 @@
             function dragging(event){
                 var x=event.clientX;
                 var y=event.clientY;
-                var h=136;
+                var h=200;
                 var w=875;
-                document.getElementById("t1").height=Math.abs(h-y);
+                document.getElementById("t1").height=Math.abs(h+(y-331));
                 document.getElementById("t1").width=Math.abs((x-875)+300);
             }
+            // function disp(event){
+            //     document.getElementById("tf3").value=event.clientY;
+            // }
             //875
         </script>        
     </head>
@@ -65,7 +68,7 @@
         </div>
         <br><br><br>
         <div class="frame" align="center">
-            <iframe class="test" src="https://www.wikipedia.org/" id="t1" height="200px" width="300px"></iframe>
+            <iframe class="test" src="https://www.google.com/webhp?igu=1" id="t1" height="200px" width="400px"></iframe>
             <button ondrag="dragging(event)" draggable="true" ></button>
         </div>
         <br><br><br>
